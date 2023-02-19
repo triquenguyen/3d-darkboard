@@ -9,5 +9,5 @@ def index():
     return 'Hello World'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="10.19.187.57", port=3000)
 

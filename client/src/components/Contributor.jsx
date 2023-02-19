@@ -6,7 +6,9 @@ import { motion } from 'framer-motion'
 
 export const Contributor = ({ photo, role, major, name, linkedin, github, gmail }) => {
   return (
-    <div className='text-left p-[24px]'>
+    <motion.div
+        whileHover={{ scale: 1.05 }}
+    >
         <div className="text-left font-semibold text-[#e5c07b]">
             {`<${name}>`}
         </div>
@@ -18,22 +20,22 @@ export const Contributor = ({ photo, role, major, name, linkedin, github, gmail 
             {major}
         </div>
         <div className="flex gap-2 items-center ">
-            <p className="lg:block hidden text-[#61AFEF]">contact me</p> 
-            <motion.div whileHover={{ scale: 1.1 }} className='shadow-[#61afef] shadow-md'>
+            <p className="text-[#61AFEF]">contact me</p> 
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95}} className='shadow-[#61afef] shadow-md'>
                 <a href={linkedin}>
-                    <img className="w-[20px] hover:ring-grey" src={LinkedIn} />
+                    <img className="w-[24px] hover:ring-grey" src={LinkedIn} />
                 </a> 
             </motion.div>
             
-            <motion.div whileHover={{ scale: 1.1 }} className='shadow-[#56b6c2] shadow-md'>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95}} className='shadow-[#56b6c2] shadow-md'>
                 <a href={github}>
-                    <img className="w-[20px]" src={GitHub} />
+                    <img className="w-[24px]" src={GitHub} />
                 </a> 
             </motion.div>
             
-            <motion.div whileHover={{ scale: 1.1 }} className='shadow-[#e06c75] shadow-md'>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95}} className='shadow-[#e06c75] shadow-md'>
                 <a href={gmail}>
-                    <img className="w-[20px]" src={Gmail} />
+                    <img className="w-[24px]" src={Gmail} />
                 </a> 
             </motion.div>
             
@@ -41,6 +43,6 @@ export const Contributor = ({ photo, role, major, name, linkedin, github, gmail 
         <div className="text-left font-semibold text-[#e5c07b]">
             {`<${name} />`}
         </div>
-    </div>
+    </motion.div>
   )
 }
