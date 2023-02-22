@@ -14,7 +14,7 @@ const Home = () => {
         damping: 10,
         stiffness: 50
       }}
-      className="text-[18px] mt-[25%]">
+      className="text-[18px] mt-[20%]">
         <Link to='/' className="font-[700] text-[#c678dd] text-[24px] sm:text-[64px]">hello_darkboard</Link>
         <p className='text-[#61AFEF] py-[48px]'>Experience the cutting-edge technology that enables stunning 3D visualization of drawings in space</p>
         <motion.div 
